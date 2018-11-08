@@ -1,20 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <div id="app">
+      <Slide>
+        <div id="nav">
+          <router-link to="/"><font-awesome-icon icon="js"/> Home</router-link>
+          <router-link to="/settings">Setting</router-link>
+        </div>
+      </Slide>
+      <router-view/>
+    </div>  
 </template>
 
-<style>
+
+<script>
+import { Slide } from 'vue-burger-menu'
+import sass from 'sass-loader'
+ 
+export default {
+    components: {
+        Slide,
+    }
+}
+</script>
+
+
+<style lang="scss">
+body{
+  background-color: #1a1a1a
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
 }
 #nav {
   padding: 30px;
@@ -22,10 +41,15 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #76f8f8;
 }
 </style>

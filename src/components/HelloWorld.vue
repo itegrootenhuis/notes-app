@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+  </div>    
 </template>
 
 <script lang="ts">
@@ -13,9 +15,7 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body{
-  background-color: #1a1a1a
-}
+
 h3 {
   margin: 40px 0 0;
 }
